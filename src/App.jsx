@@ -1,33 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import PrayerTimes from "./components/PrayerTimes"
+
 
 function App() {
-  const [count, setCount] = useState(0)
+
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <section>
+      <div className="container">
+        <div className="top_sec">
+          <div className="city">
+            <h3>المدينة</h3>
+
+            <select name="" id="">
+              <option value="">Select City</option>
+              <option value={20}>القاهرة</option>
+              <option value={20}>الاسكندرية</option>
+            </select>
+          </div>
+          <div className="date">
+            <h4>التاريخ</h4>
+            <h4>8-10-2025</h4>
+          </div>
+        </div>
+        <div className="bottom_sec">
+          <PrayerTimes name="الفجر" time='04:15' />
+          <PrayerTimes name="الظهر" time='04:15' />
+          <PrayerTimes name="العصر" time='04:15' />
+          <PrayerTimes name="المغرب" time='04:15' />
+          <PrayerTimes name="العشاء" time='04:15' />
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    </section>
     </>
   )
 }
