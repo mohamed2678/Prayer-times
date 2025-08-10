@@ -1,3 +1,4 @@
+/* Existing styles */
 @import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 * {
@@ -15,18 +16,23 @@ section {
   background: url(./assets/bg.jpg);
   background-size: cover;
   background-position: center;
-  height: 100vh;
+  min-height: 100vh;
+  height: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
+  padding: 20px;
 }
+
 section .container {
   width: 650px;
+  max-width: 100%;
   padding: 30px 25px;
   background-color: #332a224e;
   backdrop-filter: blur(10px);
   border-radius: 10px;
   border: 1px solid #d7d7d74e;
-  margin-right: 15%;
+  margin-right: -45%;
 }
 
 section .top_sec {
@@ -47,11 +53,13 @@ section .top_sec select {
   font-size: 22px;
   margin-top: 10px;
 }
+
 section .top_sec h3 {
   font-size: 30px;
   color: #fff;
   font-weight: 600;
 }
+
 section .top_sec .date {
   width: 250px;
 }
@@ -59,4 +67,107 @@ section .top_sec .date {
 section .top_sec .date h4 {
   font-size: 26px;
   color: #fff;
+}
+
+section .prayer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  background: #c0583e75;
+  margin-bottom: 25px;
+  color: #fff;
+  font-size: 25px;
+  border-radius: 5px;
+  border: 1px solid #d7d7d74e;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  section .container {
+    margin-right: 10%;
+  }
+}
+
+@media (max-width: 992px) {
+  section .container {
+    margin-right: 5%;
+  }
+}
+
+@media (max-width: 768px) {
+  section .container {
+    margin-right: 0;
+    width: 90%;
+  }
+  
+  section .top_sec {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  section .top_sec select,
+  section .top_sec .date {
+    width: 100%;
+  }
+  
+  section .top_sec h3 {
+    font-size: 26px;
+  }
+  
+  section .top_sec .date h4 {
+    font-size: 22px;
+  }
+  
+  section .prayer {
+    font-size: 20px;
+    padding: 5px 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  section .container {
+    padding: 20px 15px;
+  }
+  
+  section .top_sec {
+    padding-bottom: 30px;
+    margin-bottom: 30px;
+  }
+  
+  section .top_sec select {
+    font-size: 18px;
+  }
+  
+  section .prayer {
+    font-size: 18px;
+    flex-direction: column;
+    text-align: center;
+    gap: 5px;
+    padding: 10px;
+  }
+  
+  section .prayer > div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 400px) {
+  section .top_sec h3 {
+    font-size: 22px;
+  }
+  
+  section .top_sec .date h4 {
+    font-size: 18px;
+  }
+  
+  section .top_sec select {
+    font-size: 16px;
+  }
+  
+  section .prayer {
+    font-size: 16px;
+  }
 }
