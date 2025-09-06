@@ -1,12 +1,32 @@
 # React + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+تطبيق أذان بسيط وحديث يعرض أوقات الصلاة حسب موقع المستخدم، مع تنبيهات، صوت الأذان، ودعم اللغة العربية/الإنجليزية. مبني باستخدام React 18 وVite مع دعم PWA اختياري.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## المميزات
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **أوقات الصلاة:** حساب وجلب أوقات الصلاة يوميًا حسب الموقع أو المدينة.
+- **تنبيهات وإشعارات:** تذكير قبل الأذان وأثناءه مع دعم إشعارات المتصفح.
+- **صوت الأذان:** تشغيل ملف أذان محلي أو عبر رابط خارجي.
+- **تعدد اللغات:** عربي/إنجليزي مع تبديل فوري.
+- **الوضع الليلي:** تفعيل تلقائي/يدوي للمظهر الداكن.
+- **PWA اختياري:** تثبيت التطبيق على الجهاز والعمل دون اتصال جزئيًا.
+- **خيارات الحساب:** طريقة الحساب، المذهب، وضبط خطوط العرض العالية.
+
+---
+
+## المتطلبات
+
+- **Node.js:** v18+
+- **Package manager:** npm أو pnpm أو yarn
+- **مفتاح API (اختياري):** إذا استخدمت خدمة طرف ثالث، مثل AlAdhan API (لا يتطلب مفتاحًا).
+
+---
+
+## البدء السريع
+
+- **التثبيت:**
+  ```bash
+  npm i
